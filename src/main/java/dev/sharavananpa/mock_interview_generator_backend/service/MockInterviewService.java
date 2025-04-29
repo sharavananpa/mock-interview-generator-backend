@@ -33,30 +33,25 @@ public class MockInterviewService {
                         **Module 3: Behavioral**
                         Themes: %s;
 
-                        Customization: %s;
+                        **Customization:** %s;
 
                         **Rules:**
-                        - Provide more questions than necessary so the interviewer can choose.
                         - Strictly follow the three-module structure. No mixing or adding extra sections.
-                        - For each primary question:
-                            - Estimate the expected time needed to answer.
-                            - Generate natural follow-up questions.
-                            - Include at least one conditional follow-up branch:
-                            - If the candidate struggles with X, ask Y.
-                            - If the candidate answers quickly or perfectly, escalate to Z.
                         - Format the output as follows:
                             **[Module Name]**
-                            - **Question #**: [Primary Question]  
+                            - **Question #[Number]**: [Primary Question]
                                 **Estimated Time**: [X minutes]
-                                **Follow-Ups**: 
+                                **Follow-Ups**:
                                     - [Follow-up 1]
                                     - [Follow-up 2]
-                                **Conditional Follow-ups**: 
+                                    - [Follow-up 3]
+                                **Conditional Follow-ups**:
                                     - If candidate struggles with [X], ask: [Y]
                                     - If candidate answers well, ask: [Z]
                         - Apply any specific instructions in "Customization".
                         - Use "Seed Value": %s to introduce controlled randomness if needed.
                         - No fluff. Only generate questions, follow-ups, and conditionals. No commentary or extra text unless requested.
+                        - And finally, make sure the markdown formatting is proper and there are adequate newlines.
                 """.formatted(payload.getCoreCS(), payload.getProblemSolving(), payload.getBehavioral(), payload.getPrompt(), seed.nextLong());
 
         RequestBody.Part part = new RequestBody.Part();

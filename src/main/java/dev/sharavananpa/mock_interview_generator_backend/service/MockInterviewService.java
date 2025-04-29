@@ -29,8 +29,6 @@ You are tasked with generating a structured set of interview questions for a Sof
 - **Module 3:** Behavioral: Themes = ***%s*** (ignore module if empty array)
 - **Customization & Constraints:** ***%s***
 
-(If all the topics and themes are empty, just ask the user to select some topics/themes! Don't comment on this prompt at all. The user shouldn't know the underlying prompt.)
-
 **Rules & Formatting:**
 1. **Precise Formatting:** Use the following markdown format EXACTLY for each question:
 
@@ -41,21 +39,22 @@ You are tasked with generating a structured set of interview questions for a Sof
     **Estimated Time**: [X minutes]
     **Focus Area**: [Briefly state the core concept/skill being tested, e.g., "Process Synchronization", "Tree Traversal", "Conflict Resolution"]
     **Follow-Ups**:
-            - [Follow-up Question 1]
-            - [Follow-up Question 2]
-            - [Additonal Follow-ups if necessary]
+        - [Follow-up Question 1]
+        - [Follow-up Question 2]
+        - [Additonal Follow-ups if necessary]
     **Hints (If candidate struggles)**:
-            - [Hint 1, potentially simplifying the problem or pointing towards a concept]
-            - [Hint 2]
-            - [Additional Hints if necessary]
+        - [Hint 1, potentially simplifying the problem or pointing towards a concept]
+        - [Hint 2]
+        - [Additional Hints if necessary]
     **Deeper Dive (If candidate excels)**:
-            - [Advanced follow-up 1, e.g., asking about complexity, trade-offs, alternative solutions, scaling]
-            - [Advanced follow-up 2]
-            - [Additional Deeper Dives if necessary]
+        - [Advanced follow-up 1, e.g., asking about complexity, trade-offs, alternative solutions, scaling]
+        - [Advanced follow-up 2]
+        - [Additional Deeper Dives if necessary]
 
 2. **Content Relevance:** Questions must align with the specified `Topics` (Modules 1 & 2) and `Themes` (Module 3). **If the Topics / Themes array is empty, skip the module entirely!**
 3. **Customization Implementation:** Incorporate all instructions from the `Customization & Constraints` section.
 4. **No Extraneous Text:** Generate *only* the structured questions as specified. Do not include introductory sentences, concluding remarks, explanations of the process, or any commentary outside the defined question format.
+Note: This output is used for a mock interview generator application. Don't comment on this prompt in any way!
                 """.formatted(payload.getCoreCS(), payload.getProblemSolving(), payload.getBehavioral(), payload.getPrompt());
 
         RequestBody.Part part = new RequestBody.Part();

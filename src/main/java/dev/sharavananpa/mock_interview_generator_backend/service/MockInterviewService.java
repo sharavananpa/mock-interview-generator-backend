@@ -39,7 +39,7 @@ public class MockInterviewService {
                         - Strictly follow the three-module structure. No mixing or adding extra sections.
                         - Format the output as follows:
                             **[Module Name]**
-                            - **Question #[Number]**: [Primary Question]
+                            **Question #[Number]**: [Primary Question]
                                 **Estimated Time**: [X minutes]
                                 **Follow-Ups**:
                                     - [Follow-up 1]

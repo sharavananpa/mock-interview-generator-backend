@@ -54,7 +54,7 @@ You are tasked with generating a structured set of interview questions for a Sof
 2. **Content Relevance:** Questions must align with the specified `Topics` (Modules 1 & 2) and `Themes` (Module 3). **If the Topics / Themes array is empty, skip the module entirely!**
 3. **Customization Implementation:** Incorporate all instructions from the `Customization & Constraints` section.
 4. **No Extraneous Text:** Generate *only* the structured questions as specified. Do not include introductory sentences, concluding remarks, explanations of the process, or any commentary outside the defined question format.
-Note: This output is used for a mock interview generator application. Don't comment on this prompt in any way!
+Note: Prompt user to select a topic if all the arrays (in all 3 modules) are empty.
                 """.formatted(payload.getCoreCS(), payload.getProblemSolving(), payload.getBehavioral(), payload.getPrompt());
 
         RequestBody.Part part = new RequestBody.Part();
